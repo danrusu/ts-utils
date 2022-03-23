@@ -6,8 +6,8 @@ export default class SoftAssert {
   }
 
   assertAll() {
-    const collectedErrors:Array<Error> = [];
-    this.assertions.forEach(assertion => {
+    const collectedErrors: Array<Error> = [];
+    this.assertions.forEach((assertion) => {
       try {
         assertion();
       } catch (err) {
@@ -23,8 +23,8 @@ export default class SoftAssert {
     if (errors.length > 0) {
       throw new Error(
         `${errors.length} failed assertions\n${errors
-          .map(e => e.message)
-          .join('\n')}`
+          .map((e) => e.message)
+          .join('\n')}`,
       );
     }
   }
