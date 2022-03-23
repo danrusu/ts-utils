@@ -4,7 +4,7 @@ import SoftAssert from '../src/SoftAssert';
 
 describe('Soft assert test', () => {
   const softAssert = new SoftAssert();
-  it('Collects and throws relevant error', () => {
+  it('Collects failures and throws relevant error', () => {
     const EXPECTED_ASSERTION_ERROR = [
       '3 failed assertions',
       'numbers check: expected 1 to equal 2',

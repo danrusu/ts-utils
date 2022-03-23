@@ -1,8 +1,8 @@
 export default class SoftAssert {
   private assertions: Array<() => void> = [];
 
-  add(...toAssert: Array<() => void>) {
-    this.assertions = [...this.assertions, ...toAssert];
+  add(...newAssertions: Array<() => void>) {
+    this.assertions = [...this.assertions, ...newAssertions];
   }
 
   assertAll() {
