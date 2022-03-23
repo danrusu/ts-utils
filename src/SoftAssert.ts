@@ -6,7 +6,7 @@ export default class SoftAssert {
   }
 
   assertAll() {
-    const collectedErrors = [];
+    const collectedErrors:Array<Error> = [];
     this.assertions.forEach(assertion => {
       try {
         assertion();
@@ -19,7 +19,7 @@ export default class SoftAssert {
     this.assertNoErrors(collectedErrors);
   }
 
-  private assertNoErrors(errors: Array<any>) {
+  private assertNoErrors(errors: Array<Error>) {
     if (errors.length > 0) {
       throw new Error(
         `${errors.length} failed assertions\n${errors
