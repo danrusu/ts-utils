@@ -1,10 +1,37 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint", 
+    "prettier"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
-  ]
+  ],
+  "rules": {
+    "max-lines": 0,
+    "max-lines-per-function": 0,
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "prettier/prettier": "error",
+    "import/imports-first": 0,
+    "linebreak-style": 0,
+    "prefer-const": "error",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "default-case": "off",
+    "prefer-destructuring": [
+        "error",
+        {
+          "VariableDeclarator": {
+            "array": false,
+            "object": true
+          },
+          "AssignmentExpression": {
+            "array": false,
+            "object": false
+          }
+        }
+      ]
+  }
 }
