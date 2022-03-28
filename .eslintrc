@@ -1,9 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint", 
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -21,17 +19,17 @@
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "default-case": "off",
     "prefer-destructuring": [
-        "error",
-        {
-          "VariableDeclarator": {
-            "array": false,
-            "object": true
-          },
-          "AssignmentExpression": {
-            "array": false,
-            "object": false
-          }
+      "error",
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": false,
+          "object": false
         }
-      ]
+      }
+    ]
   }
 }
