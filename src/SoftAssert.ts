@@ -1,25 +1,23 @@
 export default class SoftAssert {
-  private assertions: Array<() => void> = [];
+  private collectedErrors: Array<any> = [];
 
-  add(...newAssertions: Array<() => void>) {
-    this.assertions = [...this.assertions, ...newAssertions];
-  }
-
-  assertAll() {
-    const collectedErrors: Array<Error> = [];
-    this.assertions.forEach((assertion) => {
+  assert(...assertions: Array<() => void>) {
+    assertions.forEach((assertion) => {
       try {
         assertion();
       } catch (err) {
-        collectedErrors.push(err);
+        this.collectedErrors.push(err);
       }
     });
-    this.assertions = [];
-
-    this.assertNoErrors(collectedErrors);
   }
 
-  private assertNoErrors(errors: Array<Error>) {
+  assertAll() {
+    const allErrors = [...this.collectedErrors];
+    this.collectedErrors = [];
+    this.assertNoErrors(allErrors);
+  }
+
+  private assertNoErrors(errors: Array<any>) {
     if (errors.length > 0) {
       throw new Error(
         `${errors.length} failed assertions\n${errors
