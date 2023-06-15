@@ -2,7 +2,7 @@ import 'mocha';
 import { expect, assert } from 'chai';
 import SoftAssert from '../src/SoftAssert';
 
-describe('Soft assert test', () => {
+describe('SoftAssert test', () => {
   const soft = new SoftAssert();
   it('Collects failures and throws relevant error', () => {
     const EXPECTED_ASSERTION_ERROR = [

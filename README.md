@@ -5,17 +5,17 @@ TypeScript utilities &amp; Specs
 ### Setup
 
 ```
-npm install
+pnpm install
 ```
 
 ### Run tests
 
 ```
-npm test
+pnpm test
 ```
 
 ### Build
 
 ```
-npm run build
+pnpm build
 ```
