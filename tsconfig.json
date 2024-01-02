@@ -1,8 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "CommonJS",
-    "target": "ES6"
+    "outDir": "dist",    
+    "module": "NodeNext",    
+    "target": "ESNext",
+    "declaration": true,
+    "sourceMap": true,
+    "allowJs": true,    
+    "forceConsistentCasingInFileNames": true,    
+    "strict": true,
+    "noImplicitAny": true
   },
   "include": ["src", "test"]
 }

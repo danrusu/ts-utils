@@ -34,8 +34,10 @@ describe('wait test', () => {
     try {
       await waitUntilResult(() => name, EXPECTED_NAME, WAIT_UNTIL_TIMEOUT, 500);
       throw new Error('waitUntilResult did not timed out');
-    } catch (e) {
-      expect(e.message).equals(`${WAIT_UNTIL_TIMEOUT} ms timeout exeeded`);
+    } catch (e: unknown) {
+      expect((e as { message: string }).message).equals(
+        `${WAIT_UNTIL_TIMEOUT} ms timeout exeeded`,
+      );
     }
   }).timeout(TEST_TIMEOUT);
 });
