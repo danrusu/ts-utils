@@ -1,4 +1,3 @@
-import 'mocha';
 import { expect, assert } from 'chai';
 import SoftAssert from '../src/SoftAssert';
 

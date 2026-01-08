@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "dist",    
-    "module": "NodeNext",    
+    "outDir": "dist",
+    "module": "NodeNext",
     "target": "ESNext",
+
     "declaration": true,
     "sourceMap": true,
-    "allowJs": true,    
-    "forceConsistentCasingInFileNames": true,    
+    "allowJs": true,
+
+    // strictness
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+
+    "moduleDetection": "force" // treat all ts/js files as modules
   },
   "include": ["src", "test"]
 }
