@@ -9,6 +9,11 @@ const myEnvVar = process.env.MY_ENV_VAR; // TypeScript should know this is a str
 
 assert(typeof myEnvVar === 'string', 'MY_ENV_VAR should be a string');
 
+// runtime check
+// if (!myEnvVar) {
+//   throw new Error('MY_ENV_VAR is not defined');
+// }
+
 console.log(`MY_ENV_VAR is set to: ${myEnvVar}`);
 
 declare global {
