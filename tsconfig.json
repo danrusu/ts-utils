@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "dist",
+
     "module": "NodeNext",
     "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"], // add frontend types
 
     "declaration": true,
     "sourceMap": true,
